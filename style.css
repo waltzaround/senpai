@@ -71,7 +71,7 @@ Main containers for components
 }
 
 .FooterContainer {
-  margin-top: 3.5rem;
+  margin-top: 2.5rem;
 }
 /* 
 ==================================
@@ -97,16 +97,27 @@ Link styles for footer
 Switch 
 ==================================
 */
-label {
-  float: left;
+.LabelGrid {
+display: grid;
+grid-template-columns: 60px 200px;
+height: 40px;
 
+}
+
+.LabelContainer {
+
+  width: 60px;
+  float: left;
 }
 
 .LabelTitle {
 
-  position: relative;
-  left: 8px;
-  top: 8px;
+
+  width: 184px;
+  margin-left: 8px;
+  margin-top: -5px;
+  justify-self: center;
+  align-self: center;
   font-weight: 700;
   color: #00FFC6;
 }
