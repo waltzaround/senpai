@@ -4,6 +4,9 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   }
+/* 
+Text Styles 
+*/
 
   h1 {
       letter-spacing: -1px;
@@ -15,6 +18,13 @@
       color: white;
       line-height: 24px;
   }
+
+
+
+
+
+
+
 
 .mainContainer {
     margin: auto;
