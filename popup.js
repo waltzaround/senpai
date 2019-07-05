@@ -2,12 +2,13 @@ var actionstate = false;
 function trueaction() {
 console.log("become inactive")
 document.getElementById("senpaiState").style.color = '#303030';
-
+document.getElementById("senpaiState").innerHTML = 'Senpai is inactive'
 }
 
 function falseaction(){
   console.log("become active")
   document.getElementById("senpaiState").style.color = '#00FFC6';
+  document.getElementById("senpaiState").innerHTML = 'Senpai is active'
 
 }
 

@@ -73,7 +73,7 @@ Main containers for components
 }
 
 .FooterContainer {
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
 }
 /* 
 ==================================
@@ -84,6 +84,7 @@ Link styles for footer
   margin-top: 0.8rem;
   margin-left: 1rem;
   position: relative;
+  font-size: 1.1rem;
 }
 
 .bottomLink {
