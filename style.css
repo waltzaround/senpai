@@ -18,10 +18,12 @@ p{
   color: white;
   font-weight: 300;
   letter-spacing: -0.6px;
+  line-height: 24px
 }
 
 strong {
   letter-spacing: -0.3px;
+  line-height: 32px
 }
 
 img {
@@ -54,7 +56,7 @@ Main containers for components
 
 .mainContainer {
   width: 280px;
-  height: 280px;
+  height: 296px;
   background-color: black;
 }
 
@@ -95,6 +97,20 @@ Link styles for footer
 Switch 
 ==================================
 */
+label {
+  float: left;
+
+}
+
+.LabelTitle {
+
+  position: relative;
+  left: 8px;
+  top: 8px;
+  font-weight: 700;
+  color: #00FFC6;
+}
+
 
 .switch {
   position: relative;
@@ -116,7 +132,7 @@ Switch
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #303030;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -129,16 +145,17 @@ Switch
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  box-shadow: 3px 3px 24px #303030;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #00FFC6;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #00FFC6;
 }
 
 input:checked + .slider:before {
