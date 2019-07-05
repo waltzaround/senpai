@@ -2,10 +2,13 @@ var actionstate = false;
 function trueaction() {
 console.log("become inactive")
 document.getElementById("senpaiState").style.color = '#303030';
+
 }
 
 function falseaction(){
   console.log("become active")
+  document.getElementById("senpaiState").style.color = '#00FFC6';
+
 }
 
 
