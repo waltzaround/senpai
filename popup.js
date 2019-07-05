@@ -1,7 +1,7 @@
 var actionstate = false;
 function trueaction() {
 console.log("become inactive")
-document.getElementById("senpaiState").style.color = '#303030';
+document.getElementById("senpaiState").style.color = '#7F7F7F';
 document.getElementById("senpaiState").innerHTML = 'Senpai is inactive'
 }
 
