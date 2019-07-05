@@ -87,10 +87,13 @@ Link styles for footer
 .bottomLink {
 
   color: #00FFC6;
-
-
   text-decoration: none;
   float: none;
+}
+
+
+.bottomLink:hover {
+font-weight: 700;
 }
 /* 
 ==================================
@@ -118,8 +121,8 @@ height: 40px;
   margin-top: -5px;
   justify-self: center;
   align-self: center;
-  font-weight: 700;
-  color: #00FFC6;
+  font-weight: 300;
+  color: #AEAEAE;
 }
 
 
