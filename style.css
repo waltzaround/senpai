@@ -125,7 +125,7 @@ height: 40px;
   justify-self: center;
   align-self: center;
   font-weight: 700;
-  color: #303030;
+  color: #7F7F7F;
 }
 
 
@@ -149,7 +149,7 @@ height: 40px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #303030;
+  background-color: #7F7F7F;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
