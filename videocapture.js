@@ -1,4 +1,7 @@
 function detectFace(){
+
+
+
     let video = document.getElementById("videoInput"); // video is the id of video tag
     navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(function(stream) {
@@ -8,6 +11,7 @@ function detectFace(){
     .catch(function(err) {
         console.log("An error occurred! " + err);
     });
+
     let src = new cv.Mat(video.height, video.width, cv.CV_8UC4);
     let dst = new cv.Mat(video.height, video.width, cv.CV_8UC4);
     let gray = new cv.Mat();
