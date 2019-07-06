@@ -9,7 +9,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   if (changeInfo.status == "loading" && block === true) {
     let check = tab.url;
     console.log(tab.url);
-      if(check.search(/reddit|facebook|youtube|pornhub|twitter/i)>=0){
+      if(check.search(/reddit|facebook|youtube|pornhub|porn|instagram|twitter/i)>=0){
         safesite = false;
       }
       if (!safesite) {
