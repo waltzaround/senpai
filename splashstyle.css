@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: black;
   }
 /* 
 Text Styles 
@@ -22,6 +23,7 @@ Text Styles
 
 .mainContainer {
     margin: auto;
+    margin-top: calc(50vh - 200px);
     background-color:black;
     height: 320px;
     width: 640px;
