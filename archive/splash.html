@@ -20,8 +20,17 @@
             <div class="copyContainer">
                 <p>Senpai has protected you from this distraction.<br>You should be studying!</p>
             </div>
-            <p class="countdown" id='potato'>Closing this tab in 3..</p>
-
+            <p class="countdown" id='potato'>Closing this tab in <span id = "clock">3</span>..</p>
+            <script>
+            var s = 2;
+            var x = setInterval(function(){
+                document.getElementById("clock").innerHTML = s;
+                if (s < 1){
+                    window.close();
+                }
+                s = s-1;
+            },1000);
+            </script>
         </div>
     </div>
 
