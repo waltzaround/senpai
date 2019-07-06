@@ -18,6 +18,7 @@ function updateFilters(urls) {
     },
     ["blocking"]
   );
+  // window.open("splash.html");
 }
 
 updateFilters();
