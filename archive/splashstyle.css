@@ -1,0 +1,61 @@
+* {
+    font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  }
+/* 
+Text Styles 
+*/
+
+  h1 {
+      letter-spacing: -1px;
+      color: white;
+      text-transform: uppercase;
+  }
+
+  p {
+      color: white;
+      line-height: 24px;
+  }
+
+
+.mainContainer {
+    margin: auto;
+    background-color:black;
+    height: 320px;
+    width: 640px;
+}
+
+.iconContainer {
+
+    padding-top: 2rem;
+    padding-left: 2rem;
+    height: 80px;
+    width: 80px;
+
+}
+
+
+.iconImage {
+
+    height: 80px;
+    width: 80px;   
+}
+
+.descriptionContainer {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 576px;
+    height: 160px;
+
+}
+
+.copyContainer {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.countdown {
+    opacity: 0.7;
+}

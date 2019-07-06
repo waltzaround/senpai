@@ -1,0 +1,191 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+margin: 0;
+-webkit-transition: 0.3s;
+transition: 0.3s;
+}
+button:focus { 
+  outline: none; 
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: black;
+  float: left;
+  margin-top: 6px;
+  margin-left: 3px;
+}
+p{
+  color: white;
+  font-weight: 300;
+  letter-spacing: -0.6px;
+  line-height: 24px
+}
+
+strong {
+  letter-spacing: -0.3px;
+  line-height: 32px
+}
+
+img {
+  float: left;
+}
+
+button {
+  width: 8rem;
+  background-color: 303030;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem;
+
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+
+}
+
+button:hover {
+box-shadow: 3px 3px 24px #303030;
+transform: scale(1.05);
+transition-duration: 0.3s;
+}
+/* 
+==================================
+Main containers for components 
+==================================
+*/
+
+.mainContainer {
+  width: 280px;
+  height: 296px;
+  background-color: black;
+}
+
+.headerContainer {
+  background-color: #00FFC6;
+  height: 40px;
+}
+
+.BodyContainer {
+  font-size: 1rem;
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.FooterContainer {
+  margin-top: 2.2rem;
+}
+/* 
+==================================
+Link styles for footer
+==================================
+*/
+.LinkContainer {
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.bottomLink {
+
+  color: #00FFC6;
+  text-decoration: none;
+  float: none;
+}
+
+
+.bottomLink:hover {
+font-weight: 700;
+}
+/* 
+==================================
+Switch 
+==================================
+*/
+.LabelGrid {
+display: grid;
+grid-template-columns: 60px 200px;
+height: 40px;
+
+}
+
+.LabelContainer {
+
+  width: 60px;
+  float: left;
+}
+
+.LabelTitle {
+
+
+  width: 184px;
+  margin-left: 8px;
+  margin-top: -5px;
+  justify-self: center;
+  align-self: center;
+  font-weight: 700;
+  color: #7F7F7F;
+}
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7F7F7F;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  box-shadow: 3px 3px 24px #303030;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #00FFC6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #00FFC6;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
