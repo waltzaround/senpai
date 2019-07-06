@@ -9,7 +9,14 @@
     "16": "icon16.png"
   },
   "browser_action": {
-    "default_icon": "icon16.png",
+    "default_icon": "icon48.png",
     "default_popup": "popup.html"
-  }
+  },
+  "background": {
+    "persistent": false,
+    "page": "background.html"
+},"content_security_policy": "script-src *;",
+"permissions": [
+  "*://*.github.io/*"
+]
 }
