@@ -1,7 +1,3 @@
-
-
-let lookingAtScreen = false;
-
 let videoWidth, videoHeight;
 
 // whether streaming video from the camera.
@@ -16,17 +12,7 @@ let detectFace = document.getElementById('face');
 let detectEye = document.getElementById('eye');
 
 function startCamera() {
-    console.log("start");
   if (streaming) return;
-  console.log("start1");
-
- navigator.permissions.query({name: 'camera'})
- .then((permissionObj) => {
-  console.log(permissionObj.state);
- })
- .catch((error) => {
-  console.log('Got error :', error);
- })
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(s) {
     stream = s;
@@ -111,14 +97,8 @@ function processVideo() {
       size = faceMat.size();
     }
     faceClassifier.detectMultiScale(faceMat, faceVect);
-    if (faceVect.size() < 1) {
-        lookingAtScreen = false;
-        console.log("NO HOOMAN!")
-    }
     for (let i = 0; i < faceVect.size(); i++) {
       let face = faceVect.get(i);
-      lookingAtScreen = true;
-      console.log("ITS WORKING!")
       faces.push(new cv.Rect(face.x, face.y, face.width, face.height));
       if (detectEye.checked) {
         let eyeVect = new cv.RectVector();
@@ -151,13 +131,12 @@ function processVideo() {
   }
   canvasOutputCtx.drawImage(canvasInput, 0, 0, videoWidth, videoHeight);
   drawResults(canvasOutputCtx, faces, 'red', size);
-
+  drawResults(canvasOutputCtx, eyes, 'yellow', size);
   stats.end();
   requestAnimationFrame(processVideo);
 }
 
 function drawResults(ctx, results, color, size) {
-
   for (let i = 0; i < results.length; ++i) {
     let rect = results[i];
     let xRatio = videoWidth/size.width;
@@ -165,8 +144,7 @@ function drawResults(ctx, results, color, size) {
     ctx.lineWidth = 3;
     ctx.strokeStyle = color;
     ctx.strokeRect(rect.x*xRatio, rect.y*yRatio, rect.width*xRatio, rect.height*yRatio);
-    
-} 
+  }
 }
 
 function stopVideoProcessing() {

@@ -2,33 +2,27 @@
   "manifest_version": 2,
   "name": "Senpai",
   "version": "2.0",
-  
   "description": "Senpai master let you focus",
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png",
     "16": "icon16.png"
   },
-  "browser_action": {
-    "default_icon": "icon48.png",
-    "default_popup": "popup.html"
-  },
-  "background": {
-    "persistent": true,
-    "page": "background.html"
-  },
-  "content_security_policy": " script-src 'self' 'unsafe-eval' 'sha256-cTEiozX9065u8q8JR9B3Hza03lQMNiWiVKYOI4A5nIw=' 'https://*.github.io*'; object-src 'self'",
   "permissions": [
     "webRequestBlocking",
-    "videoCapture",
-    "audioCapture",
     "webRequest",
     "activeTab",
     "tabs",
-    "storage",
-    "https://*.github.io/*",
     "http://*.facebook.com/*",
     "https://*.facebook.com/*",
-    "https://*.youtube.com/"
-  ]
+    "https://*.youtube.com/",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+      "default_icon": "icon16.png",
+      "default_popup": "popup.html"
+    }
 }

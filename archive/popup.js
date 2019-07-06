@@ -9,12 +9,8 @@ function falseaction(){
   console.log("become active")
   document.getElementById("senpaiState").style.color = '#00FFC6';
   document.getElementById("senpaiState").innerHTML = 'Senpai is active'
-
 }
 
-
-
-console.log("initial state is " + actionstate);
 document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
   e.preventDefault();
   
@@ -31,6 +27,15 @@ document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
   console.log("current state is " + actionstate);
   document.getElementById("check1").checked = actionstate;
 });
+var obj = {};
+obj['buttonState'] = actionstate;
+chrome.storage.sync.set(obj, function() {
+  // this called after the save
+});
+chrome.storage.sync.get('buttonState', function(data) {   
+  // this is called after the retrieve. 
+  actionstate = data['buttonState'];
+})
 
 
 // $(function() {
@@ -55,4 +60,4 @@ document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
 //       localStorage.currentState = "start";
 //     }
 //   });
-// });
+// 
