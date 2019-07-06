@@ -1,4 +1,5 @@
-var actionstate = false;
+ var actionstate = false;
+ 
 function trueaction() {
 console.log("become inactive")
 document.getElementById("senpaiState").style.color = '#7F7F7F';
@@ -9,13 +10,10 @@ function falseaction(){
   console.log("become active")
   document.getElementById("senpaiState").style.color = '#00FFC6';
   document.getElementById("senpaiState").innerHTML = 'Senpai is active'
-
 }
 
-
-
-console.log("initial state is " + actionstate);
 document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
+  
   e.preventDefault();
   
   if (actionstate === true) {
@@ -28,9 +26,22 @@ document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
   }
 
   actionstate = !actionstate;
+  chrome.storage.sync.set({'nowState': actionstate}, function() {
+    console.log(actionstate);
+  });
   console.log("current state is " + actionstate);
   document.getElementById("check1").checked = actionstate;
 });
+
+chrome.storage.sync.get(['nowState'], function(data) {   
+  console.log(actionstate);
+  actionstate = data['nowState'];
+  if(actionstate === true){
+    falseaction();
+    document.getElementById("check1").checked = actionstate;
+  }
+});
+
 
 
 // $(function() {
@@ -55,4 +66,4 @@ document.getElementsByClassName('switch')[0].addEventListener("click", (e) => {
 //       localStorage.currentState = "start";
 //     }
 //   });
-// });
+// 
