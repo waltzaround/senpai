@@ -19,6 +19,14 @@ function startCamera() {
     console.log("start");
   if (streaming) return;
   console.log("start1");
+
+ navigator.permissions.query({name: 'camera'})
+ .then((permissionObj) => {
+  console.log(permissionObj.state);
+ })
+ .catch((error) => {
+  console.log('Got error :', error);
+ })
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(s) {
     stream = s;
