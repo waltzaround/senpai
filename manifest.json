@@ -1,15 +1,23 @@
 {
   "manifest_version": 2,
   "name": "Senpai",
-  "version": "1.0",
-  "description": "a hello world",
+  "version": "2.0",
+  "description": "Senpai master let you focus",
   "icons": {
     "128": "icon128.png",
     "48": "icon48.png",
     "16": "icon16.png"
   },
-  "browser_action": {
-    "default_icon": "icon16.png",
-    "default_popup": "popup.html"
+  "permissions": [
+    "webRequestBlocking",
+    "webRequest",
+    "activeTab",
+    "tabs",
+    "http://*.facebook.com/*",
+    "https://*.facebook.com/*",
+    "https://*.youtube.com/"
+  ],
+  "background": {
+    "scripts": ["background.js"]
   }
 }
