@@ -1,3 +1,5 @@
+
+
 let lookingAtScreen = false;
 
 let videoWidth, videoHeight;
@@ -14,7 +16,9 @@ let detectFace = document.getElementById('face');
 let detectEye = document.getElementById('eye');
 
 function startCamera() {
+    console.log("start");
   if (streaming) return;
+  console.log("start1");
   navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(s) {
     stream = s;
