@@ -19,7 +19,7 @@
       spanWrapHelper(el, text);
     }
   }());
-  var s = 200000;
+  var s = 3;
             var x = setInterval(function(){
                 document.getElementById("clock").innerHTML = s;
                 if (s < 1){
