@@ -1,2 +1,0 @@
-# senpai
-anti-procrastination weapons
