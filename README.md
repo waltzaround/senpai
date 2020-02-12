@@ -3,3 +3,6 @@ Senpai is a simple website blocker that helps you study. It notices when you try
 
 
 Now available on the Chrome Web Store: https://chrome.google.com/webstore/detail/senpai/pfkacaifoalmlflljbombdhcfheoelpc
+
+
+Made with care at a Hackathon by Zhiwei Xu, Walter Lim, Krishnan Sharma and Kok Hong Leon Le
